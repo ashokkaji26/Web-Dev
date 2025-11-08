@@ -1,0 +1,156 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header & Navbar */
+header {
+    background-color: #cb202d; /* Zomato red */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    height: 35px;  /* ✅ smaller logo */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Optional — add a subtle hover effect */
+header .logo img:hover {
+    transform: scale(1.05);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url("../img/zomato_bg.png") no-repeat center center/cover;
+    height: 80vh;
+    position: relative;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .main-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.hero input {
+    width: 60%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Delivery Section */
+.delivery {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff5f5;
+}
+
+.delivery h2 {
+    font-size: 2rem;
+    color: #cb202d;
+    margin-bottom: 10px;
+}
+
+.delivery p {
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.food-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    color: #cb202d;
+}
+
+.card p {
+    color: #555;
+    padding: 0 15px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #cb202d; /* same as navbar */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

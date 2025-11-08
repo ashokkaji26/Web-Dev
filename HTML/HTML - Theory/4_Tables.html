@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table in HTML</title>
+
+    <!-- Css using chatGPT-->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            text-align: left;
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Table in HTML </h1>
+
+    <table>
+        <caption> Employee data </caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sachin</td>
+                <td>Software Engineer</td>
+                <td>35000$</td>
+            </tr>
+            <tr>
+                <td>Ashok</td>
+                <td>AI Engineer</td>
+                <td>20000$</td>
+            </tr>
+            <tr>
+                <td>Suraj</td>
+                <td>Physics Educator</td>
+                <td>15000$</td>
+            </tr>
+            <tr>
+                <td>Thank</td>
+                <td colspan="2">You</td> <!-- Colspan -->
+            </tr>
+
+        </tbody>
+    </table>
+
+    <br>
+    <hr> <br>
+
+    <!-- Rowspan -->
+
+    <table border="1" cellpadding="8">
+        <caption>Students Marks</caption>
+        
+            <tr>
+                <th>Name</th>
+                <th rowspan="2">Course</th>
+                <th>Marks</th>
+            </tr>
+        
+        
+            <tr>
+                <td>Ashok</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td colspan="2">Riya</td>
+                <!-- <td>Computer Science</td> -->
+                <td>89</td>
+            </tr>
+        
+    </table>
+
+
+</body>
+
+</html>
